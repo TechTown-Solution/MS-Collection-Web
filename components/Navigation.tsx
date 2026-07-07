@@ -52,10 +52,9 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Center Logo */}
         <div className="flex-1 flex justify-center">
-          <a href="#" className="font-playfair text-2xl md:text-3xl tracking-tight text-text-primary">
-            Atelier
+          <a href="/" className="font-playfair text-2xl md:text-3xl tracking-tight text-text-primary">
+            MS Collection
           </a>
         </div>
 
@@ -86,14 +85,20 @@ export default function Navigation() {
         </button>
 
         <nav className="flex flex-col space-y-8 text-center">
-          {['Collections', 'Our Story', 'The Process', 'Journal', 'Contact'].map((item, idx) => (
+          {[
+            { name: 'Shop', href: '/shop' },
+            { name: 'Collections', href: '/#collections' },
+            { name: 'Our Story', href: '/#our-story' },
+            { name: 'The Process', href: '/#the-process' },
+            { name: 'Contact', href: '/#contact' }
+          ].map((item, idx) => (
             <a 
               key={idx}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
+              href={item.href}
               onClick={() => setIsMenuOpen(false)}
               className="font-playfair text-4xl md:text-6xl text-alabaster hover:text-champagne transition-colors duration-500 italic font-light"
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </nav>

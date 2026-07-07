@@ -86,8 +86,9 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               className="flex items-center justify-center w-64 h-64 relative"
             >
               {/* Needle and Thread SVG Animation */}
-              <svg viewBox="0 0 200 200" className="w-full h-full absolute inset-0">
+              <svg suppressHydrationWarning viewBox="0 0 200 200" className="w-full h-full absolute inset-0">
                 <motion.path
+                  suppressHydrationWarning
                   d="M 20 180 C 20 180, 50 120, 100 120 C 150 120, 180 60, 180 20"
                   fill="transparent"
                   strokeWidth="2"
@@ -108,8 +109,8 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
                   }}
                   transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
                 >
-                  <path d="M -5 5 L 15 -15 L 20 -20 L 15 -10 Z" fill="var(--color-alabaster)" />
-                  <circle cx="-2" cy="2" r="1.5" fill="var(--color-bg-primary)" />
+                  <path suppressHydrationWarning d="M -5 5 L 15 -15 L 20 -20 L 15 -10 Z" fill="var(--color-alabaster)" />
+                  <circle suppressHydrationWarning cx="-2" cy="2" r="1.5" fill="var(--color-bg-primary)" />
                 </motion.g>
               </svg>
             </motion.div>
@@ -124,7 +125,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }} // Luxury easing
               className="flex flex-col items-center justify-center text-center text-alabaster"
             >
-              <h1 className="font-playfair text-4xl md:text-6xl tracking-tight mb-2">Atelier</h1>
+              <h1 className="font-playfair text-4xl md:text-6xl tracking-tight mb-2">MS Collection</h1>
               <p className="font-poppins text-xs uppercase tracking-[0.3em] text-champagne">Digital Haute Couture</p>
             </motion.div>
           )}
