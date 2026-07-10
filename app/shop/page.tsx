@@ -11,42 +11,42 @@ const DUMMY_PRODUCTS = [
     name: 'Silk Crepe Evening Gown',
     price: '$1,200',
     category: 'Dresses',
-    image: 'https://images.unsplash.com/photo-1566160983933-059695d7362f?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 2,
     name: 'Tailored Wool Blazer',
     price: '$850',
     category: 'Outerwear',
-    image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 3,
     name: 'Pleated Chiffon Midi',
     price: '$950',
     category: 'Dresses',
-    image: 'https://images.unsplash.com/photo-1572804013309-8c98e10f1484?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 4,
     name: 'Satin Slip Skirt',
     price: '$450',
     category: 'Bottoms',
-    image: 'https://images.unsplash.com/photo-1582142306909-195724d33ffc?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1582142306909-195724d33ffc?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 5,
     name: 'Cashmere Trench Coat',
     price: '$2,100',
     category: 'Outerwear',
-    image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 6,
     name: 'Structured Organza Blouse',
     price: '$550',
     category: 'Tops',
-    image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=80',
   }
 ];
 

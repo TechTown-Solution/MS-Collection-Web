@@ -60,7 +60,7 @@ export default function OurStory() {
               className="absolute left-0 top-10 w-2/3 aspect-[3/4] bg-pearl z-10"
             >
               <img 
-                src="https://images.unsplash.com/photo-1599554045580-c1195aa9a8ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
                 alt="MS Collection Craftsman" 
                 className="w-full h-full object-cover"
               />
@@ -71,7 +71,7 @@ export default function OurStory() {
               className="absolute right-0 bottom-10 w-1/2 aspect-square bg-pearl z-20 shadow-2xl"
             >
               <img 
-                src="https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=800&q=80" 
                 alt="Tailoring details" 
                 className="w-full h-full object-cover"
               />

@@ -29,7 +29,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-onyx/40 z-10" /> {/* Dark overlay */}
         {/* We use a placeholder div that feels like an image for now, ideally an actual image */}
-        <div className="w-full h-full bg-[linear-gradient(to_bottom,rgba(18,18,18,0.2),rgba(18,18,18,0.8)),url('https://images.unsplash.com/photo-1584286595398-a59f21d313f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
+        <div className="w-full h-full bg-[linear-gradient(to_bottom,rgba(18,18,18,0.2),rgba(18,18,18,0.8)),url('/images/image.png')] bg-cover bg-center" />
       </motion.div>
 
       {/* Content Container */}

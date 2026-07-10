@@ -9,27 +9,40 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    // 1. Initialize Lenis with Awwwards-winning settings
+    // We use a lerp (linear interpolation) instead of fixed duration for fluid physics
     const lenis = new Lenis({
-      duration: 1.5, // Fixed duration for ultra-smooth cinematic feel
-      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // Exponential Out easing
+      duration: 1.2, // Time to scroll
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential Out
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1,
-      syncTouch: true,
-      touchMultiplier: 2,
+      touchMultiplier: 2, // Multiply touch sensitivity
+      wheelMultiplier: 1, // Multiply mouse wheel sensitivity
+      infinite: false,
     });
 
-    // Sync Lenis with ScrollTrigger
+    // 2. Synchronize Lenis with ScrollTrigger
+    // This ensures all GSAP animations trigger at the exact right pixel
     lenis.on('scroll', ScrollTrigger.update);
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    // 3. Setup GSAP Ticker to handle the animation frame
+    // This replaces the native requestAnimationFrame for perfect synchronization
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
 
-    requestAnimationFrame(raf);
+    // 4. Disable GSAP lag smoothing to prevent jitter
+    // When the browser struggles, lag smoothing attempts to fix the timeline, 
+    // but this conflicts with Lenis physics. We turn it off for buttery smooth sync.
+    gsap.ticker.lagSmoothing(0);
 
+    // 5. Cleanup memory on unmount
     return () => {
       lenis.destroy();
+      gsap.ticker.remove((time) => {
+        lenis.raf(time * 1000);
+      });
     };
   }, []);
 

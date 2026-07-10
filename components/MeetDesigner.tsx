@@ -42,18 +42,10 @@ export default function MeetDesigner() {
         {/* Right side for desktop (text) */}
         <div className="md:col-span-6 md:col-start-7 designer-text order-2 md:order-1 flex flex-col justify-center h-full z-10 relative">
           <p className="font-poppins text-xs uppercase tracking-widest text-text-secondary mb-6">Meet the Designer</p>
-          <h2 className="font-playfair text-5xl md:text-7xl mb-8">Evelyn <span className="italic font-light">Claire</span></h2>
+          <h2 className="font-playfair text-5xl md:text-7xl mb-8">Mangal <span className="italic font-light">Shinde</span></h2>
           <p className="font-poppins text-lg leading-relaxed mb-8 max-w-lg">
             "A garment should not simply fit the body; it should elevate the spirit. My approach to tailoring is rooted in classical French techniques, yet entirely devoted to the modern woman's silhouette."
           </p>
-          
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Signature_of_Evelyn.svg" alt="Signature" className="h-16 w-auto opacity-80 invert dark:invert-0 mb-12 mix-blend-multiply dark:mix-blend-screen" />
-          
-          <button className="group relative font-poppins text-xs uppercase tracking-widest text-text-primary pb-1 overflow-hidden self-start">
-            Read Full Biography
-            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-text-primary origin-left scale-x-100 transition-transform duration-500 ease-out group-hover:scale-x-0"></span>
-            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-text-primary origin-right scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100 delay-75"></span>
-          </button>
         </div>
 
         {/* Left side for desktop (image) */}
@@ -61,7 +53,7 @@ export default function MeetDesigner() {
           <motion.div style={{ y: yPortrait }} className="w-full h-full relative">
             <div className="absolute inset-0 bg-pearl z-0 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                src="/images/designer.png" 
                 alt="Designer Portrait" 
                 className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000 ease-[0.25,1,0.5,1]"
               />

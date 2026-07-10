@@ -30,9 +30,9 @@ export default function Footer() {
             <div className="flex flex-col space-y-4">
               <h4 className="font-poppins text-xs uppercase tracking-widest text-champagne mb-4">Visit Us</h4>
               <p className="font-poppins text-sm text-text-secondary leading-relaxed">
-                124 Rue du Faubourg<br />
-                Saint-Honoré, 75008<br />
-                Paris, France
+                Prestige Park, Pune-Nashik Highway,<br />
+                Near Indian Petrol Pump, Ekta Nagar<br />
+                Chakan, Pune, India - 410501
               </p>
               <a href="mailto:appointments@mscollection.com" className="font-poppins text-sm mt-4 hover:text-champagne transition-colors">
                 appointments@mscollection.com
@@ -69,7 +69,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} MS Collection Tailoring. All rights reserved.
           </p>
           <div className="flex items-center space-x-8">
-            <a href="#" className="font-poppins text-xs text-white/50 hover:text-champagne transition-colors">Instagram</a>
+            <a href="https://www.instagram.com/mscollection3531/" className="font-poppins text-xs text-white/50 hover:text-champagne transition-colors">Instagram</a>
             <a href="#" className="font-poppins text-xs text-white/50 hover:text-champagne transition-colors">Pinterest</a>
             <a href="#" className="font-poppins text-xs text-white/50 hover:text-champagne transition-colors">Privacy Policy</a>
           </div>

@@ -8,12 +8,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const portfolioImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1596450514735-111a2fe02935?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[3/4]', title: 'The Silk Silhouette' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[3/4]', title: 'The Silk Silhouette' },
   { id: 2, src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-square', title: 'Crimson Velvet' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1566162200445-312269a0a030?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[4/5]', title: 'Modern Couture' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[3/4]', title: 'Bespoke Jacket' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1603450917637-257a0753d085?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[4/3]', title: 'Bridal Embroidery' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1620799139507-2a76f79a2f4d?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-square', title: 'Tailoring Details' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1518887570146-0612132dd618?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[4/5]', title: 'Modern Couture' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[3/4]', title: 'Bespoke Jacket' },
+  { id: 5, src: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-[4/3]', title: 'Bridal Embroidery' },
+  { id: 6, src: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80', aspect: 'aspect-square', title: 'Tailoring Details' },
 ];
 
 export default function PortfolioGallery() {

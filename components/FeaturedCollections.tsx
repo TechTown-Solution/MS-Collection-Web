@@ -8,11 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const collections = [
-  { id: 1, title: 'Designer Blouses', img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-7', aspect: 'aspect-[4/3]' },
-  { id: 2, title: 'Party Wear', img: 'https://images.unsplash.com/photo-1566162200445-312269a0a030?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-5', aspect: 'aspect-[3/4]' },
-  { id: 3, title: 'Wedding Dresses', img: 'https://images.unsplash.com/photo-1596450514735-111a2fe02935?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', colSpan: 'col-span-12', aspect: 'aspect-[21/9]' },
-  { id: 4, title: 'Custom Dresses', img: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-6', aspect: 'aspect-square' },
-  { id: 5, title: 'Traditional Wear', img: 'https://images.unsplash.com/photo-1603450917637-257a0753d085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/5]' },
+  { id: 1, title: 'Designer Blouses', img: 'https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-7', aspect: 'aspect-[4/3]' },
+  { id: 2, title: 'Party Wear', img: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-5', aspect: 'aspect-[3/4]' },
+  { id: 3, title: 'Wedding Dresses', img: 'https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=1200&q=80', colSpan: 'col-span-12', aspect: 'aspect-[21/9]' },
+  { id: 4, title: 'Custom Dresses', img: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-6', aspect: 'aspect-square' },
+  { id: 5, title: 'Traditional Wear', img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80', colSpan: 'col-span-12 md:col-span-6', aspect: 'aspect-[4/5]' },
 ];
 
 export default function FeaturedCollections() {

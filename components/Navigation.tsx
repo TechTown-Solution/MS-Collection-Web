@@ -90,7 +90,8 @@ export default function Navigation() {
             { name: 'Collections', href: '/#collections' },
             { name: 'Our Story', href: '/#our-story' },
             { name: 'The Process', href: '/#the-process' },
-            { name: 'Contact', href: '/#contact' }
+            { name: 'Contact', href: '/#contact' },
+            { name: 'Admin', href: '/admin' }
           ].map((item, idx) => (
             <a 
               key={idx}

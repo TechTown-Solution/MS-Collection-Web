@@ -1,12 +1,66 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AdminDashboard() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
+  
+  // Placement State
+  const [targetSection, setTargetSection] = useState('portfolio');
+  
+  // Auth State
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [authError, setAuthError] = useState(false);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'mangal1506'){
+      setIsAuthenticated(true);
+      setAuthError(false);
+    } else {
+      setAuthError(true);
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-bg-secondary text-text-primary flex items-center justify-center p-6 font-poppins selection:bg-champagne selection:text-onyx">
+        <div className="bg-bg-primary p-8 md:p-12 shadow-2xl max-w-md w-full">
+          <h2 className="font-playfair text-3xl mb-2 text-center">Admin Access</h2>
+          <p className="text-text-secondary text-xs text-center mb-8 uppercase tracking-widest">Authorized Personnel Only</p>
+          
+          <form onSubmit={handleLogin} className="space-y-6">
+            <div className="relative w-full">
+              <input 
+                type="password" 
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder=" " 
+                className="peer w-full bg-transparent border-b border-border-subtle py-3 text-sm focus:outline-none focus:border-onyx transition-colors duration-300" 
+              />
+              <label className="absolute left-0 top-3 text-text-secondary text-sm transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-onyx peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-onyx">
+                Master Passcode
+              </label>
+            </div>
+            
+            {authError && <p className="text-xs text-red-500">Incorrect passcode. Please try again.</p>}
+            
+            <button 
+              type="submit"
+              className="w-full bg-onyx text-alabaster px-8 py-4 text-xs uppercase tracking-widest hover:bg-champagne hover:text-onyx transition-colors duration-500"
+            >
+              Enter Studio
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -41,10 +95,13 @@ export default function AdminDashboard() {
         {/* Header */}
         <header className="flex justify-between items-end border-b border-border-subtle pb-6 mb-12">
           <div>
-            <h1 className="font-playfair text-4xl md:text-5xl">Atelier <span className="italic font-light">Admin</span></h1>
+            <h1 className="font-playfair text-4xl md:text-5xl">MS Collection <span className="italic font-light">Admin</span></h1>
             <p className="text-text-secondary text-sm mt-2">Manage your digital haute couture collections.</p>
           </div>
-          <button className="text-xs uppercase tracking-widest hover:text-champagne transition-colors">
+          <button 
+            onClick={() => { setIsAuthenticated(false); setPassword(''); }}
+            className="text-xs uppercase tracking-widest hover:text-champagne transition-colors"
+          >
             Logout
           </button>
         </header>
@@ -90,6 +147,54 @@ export default function AdminDashboard() {
                   </svg>
                 </div>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Target Section */}
+              <div className="relative w-full">
+                <select 
+                  id="targetSection" 
+                  required
+                  value={targetSection}
+                  onChange={(e) => setTargetSection(e.target.value)}
+                  className="peer w-full bg-transparent border-b border-border-subtle py-3 text-sm focus:outline-none focus:border-onyx transition-colors duration-300 appearance-none rounded-none" 
+                >
+                  <option value="portfolio">Portfolio Gallery</option>
+                  <option value="featured">Featured Collections (Home)</option>
+                  <option value="shop">Shop - Ready to Wear</option>
+                </select>
+                <label className="absolute left-0 -top-4 text-xs text-onyx transition-all duration-300">
+                  Website Placement
+                </label>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <svg suppressHydrationWarning width="10" height="6" viewBox="0 0 12 8" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path suppressHydrationWarning d="M1 1.5L6 6.5L11 1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              {/* Price (Conditional) */}
+              <AnimatePresence>
+                {targetSection === 'shop' && (
+                  <motion.div 
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -10 }}
+                    className="relative w-full"
+                  >
+                    <input 
+                      type="text" 
+                      id="price" 
+                      required
+                      placeholder=" " 
+                      className="peer w-full bg-transparent border-b border-border-subtle py-3 text-sm focus:outline-none focus:border-onyx transition-colors duration-300" 
+                    />
+                    <label htmlFor="price" className="absolute left-0 top-3 text-text-secondary text-sm transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-onyx peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-onyx">
+                      Garment Price (e.g., $1,200)
+                    </label>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Image Upload Area */}
